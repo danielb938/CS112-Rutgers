@@ -1,0 +1,97 @@
+
+<!-- saved from url=(0093)https://www.cs.rutgers.edu/courses/112/classes/fall_2018_venugopal/progs/prog1/testcases.html -->
+<html class="gr__cs_rutgers_edu"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>CS112 Spring 2018: Big Integer Test Cases</title>
+<style>
+body { font: 14px Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;}
+div.code { background: lightgrey; }
+table { border-collapse: collapse; cellspacing: 0px; margin-left: 10%;}
+th { font: bold 14px Trebuchet MS; border-bottom: 1px solid black;
+padding: 5px; }
+td { padding-left: 10px; font: 13px Courier; text-align:center;}
+td.inp {font: 14px monospace; color: blue; padding-right: 30px; text-align:left;} 
+tt { color: blue; }
+a, a:visited { color: blue; }
+pre { color: blue; }
+td.hdr { font: 16px Trebuchet MS; text-align: left; 
+         padding-top: 40px; padding-bottom: 20px;}
+div.col1 { position: absolute; top: 7em; left: 10%;}
+div.col2 { position: absolute; top: 7em; left: 40%; width: 50%;}
+div.penalty { margin-left: 10%; color: red; margin-top: 10px;}
+</style>
+</head><body data-gr-c-s-loaded="true">
+<center>
+<h2>Programming Assignment 1 (Big Integer)</h2>
+<h2>Test Cases</h2>
+</center>
+<hr>
+
+<table>
+<tbody><tr><td colspan="3" class="hdr">
+<tt>parse</tt> (15 pts)</td></tr>
+<tr><th>Test</th><th>Input</th><th class="pts">Points</th></tr>
+<tr><td>1</td><td class="inp">0</td><td class="pts">1</td></tr>
+<tr><td>2</td><td class="inp">-000000</td><td class="pts">1</td></tr>
+<tr><td>3</td><td class="inp">0000000000000000000000000001</td><td class="pts">1</td></tr>
+<tr><td>4</td><td class="inp">75412367876599776552</td><td class="pts">2</td></tr>
+<tr><td>5</td><td class="inp">-000053675410980088654345123</td><td class="pts">2</td></tr>
+<tr><td>6</td><td class="inp">+123451234512345123451234577</td><td class="pts">2</td></tr>
+<tr><td>7</td><td class="inp">-123451234512345123451234577</td><td class="pts">2</td></tr>
+<tr><td>8</td><td class="inp">--123451234512345123451234577</td><td class="pts">2</td></tr>
+<tr><td>9</td><td class="inp">123+566529865762110980765640012</td><td class="pts">2</td></tr>
+</tbody></table>
+
+<div class="penalty">
+(2-point penalty if linked list was correct but either <tt>negative</tt> or
+<tt>numDigits</tt> was not, in one or more test cases.)
+</div>
+
+<p>
+<table>
+<tbody><tr><td colspan="3" class="hdr">
+<tt>add</tt> (35 pts)</td></tr>
+<tr><th>Test</th><th>Inputs</th><th class="pts">Points</th></tr>
+<tr><td>1</td><td class="inp">0 + 0</td><td class="pts">1</td></tr>
+<tr><td>2</td><td class="inp">0 + 1</td><td class="pts">1</td></tr>
+<tr><td>3</td><td class="inp">1 + 9</td><td class="pts">2</td></tr>
+<tr><td>4</td><td class="inp">9 + -8</td><td class="pts">2</td></tr>
+<tr><td>5</td><td class="inp">6575677652344321000111 + 65239124</td><td class="pts">3</td></tr>
+<tr><td>6</td><td class="inp">-6575677652344321000111 + -65239124</td><td class="pts">4</td></tr>
+<tr><td>7</td><td class="inp">6575677652344321000111 + -65239124</td><td class="pts">3</td></tr>
+<tr><td>8</td><td class="inp">-6575677652344321000111888999222444 + 65239124</td><td class="pts">4</td></tr>
+<tr><td>9</td><td class="inp">123456789123456789123456789 + -123456789123456789123456788</td><td class="pts">5</td></tr>
+<tr><td>10</td><td class="inp">987654321098765432101234 + 98765432109876543210567</td><td class="pts">5</td></tr>
+<tr><td>11</td><td class="inp">123456789123456789123456789 + -122446688113355779022446688</td><td class="pts">5</td></tr>
+
+</tbody></table>
+
+</p><div class="penalty">
+(3-point penalty if linked list was correct but either <tt>negative</tt> or
+<tt>numDigits</tt> was not, in one or more test cases.)
+</div>
+
+<p>
+<table>
+<tbody><tr><td colspan="3" class="hdr">
+<tt>multiply</tt> (30 pts)</td></tr>
+<tr><th>Test</th><th>Inputs</th><th class="pts">Points</th></tr>
+<tr><td>1</td><td class="inp">0 * 0</td><td class="pts">1</td></tr>
+<tr><td>2</td><td class="inp">1 * 0</td><td class="pts">1</td></tr>
+<tr><td>3</td><td class="inp">-10 * -20</td><td class="pts">2</td></tr>
+<tr><td>4</td><td class="inp">6575677652344321000111 * 65239124</td><td class="pts">5</td></tr>
+<tr><td>5</td><td class="inp">-10657000001000010000 * -65239124</td><td class="pts">6</td></tr>
+<tr><td>6</td><td class="inp">-4329802567 * 96010789107610065558</td><td class="pts">5</td></tr>
+<tr><td>7</td><td class="inp">-1011010101010101010101010 * -2001010</td><td class="pts">5</td></tr>
+<tr><td>6</td><td class="inp">1 * 99999999999999999999999999</td><td class="pts">5</td></tr>
+</tbody></table>
+
+</p><div class="penalty">
+(3-point penalty if linked list was correct but either <tt>negative</tt> or
+<tt>numDigits</tt> was not, in one or more test cases.)
+</div>
+
+
+
+</body></html>

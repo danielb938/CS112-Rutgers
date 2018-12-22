@@ -1,0 +1,84 @@
+------------------------------
+	//this checks to find common prefix between different two strings with different prefixes
+	private static int commonPrefix2(Indexes firstWord, Indexes secondWord, String[] allWords) {
+		int commonPrefixCount = 0;
+		String str1 = allWords[firstWord.wordIndex];
+		String str2 = allWords[secondWord.wordIndex];
+		int minLength = Math.min(str1.length(), str2.length());
+		
+		//this loops so find common prefixes using minLength
+		for (int i = 0; i < minLength; i++) {
+			
+			if (str1.charAt(i) == str2.charAt(i)) { //rat and car 
+				commonPrefixCount++;
+			}
+		}
+		
+		if (commonPrefixCount == minLength) {
+			return commonPrefixCount;
+		}
+		else {
+			return 0;
+		}
+	}
+
+------------------------------
+//this will loop through the array again
+	for (int j = 0; j < allWords.length; j++ ) {
+		
+		newIndex2 = new Indexes(j, (short) 0, (short) (allWords[j].length() - 1) );
+		TrieNode nextElement2 = new TrieNode(newIndex2, null, null);
+		
+		if (j == i) {
+			continue;
+		}
+		if (commonPrefix(nextElement.substr, nextElement2.substr, allWords) > 0) {
+			System.out.println(allWords[i].substring(0, commonPrefix(nextElement.substr, nextElement2.substr, allWords)));
+		}
+	}
+------------------------------
+//This will hold the next element in the array
+				newIndex = new Indexes(i, (short) 0, (short) (allWords[i].length() - 1) );
+				TrieNode nextElement = new TrieNode(newIndex, null, null);
+				
+				//This triggers when there no common prefix
+				if (commonPrefix(pointer.substr, nextElement.substr, allWords) == -1) {
+					
+					while(pointer.sibling != null) { //could be made to if(pointer.sibling != null
+						pointer = pointer.sibling;
+					}
+					pointer.sibling = new TrieNode(newIndex, null, null);
+					
+					//this points to the last sibling
+					pointer = pointer.sibling;
+				}
+				
+				//else {
+					
+				//}
+------------------------------
+
+
+
+
+
+
+
+private static int commonPrefix(Indexes firstWord, Indexes secondWord, String[] allWords) {
+		int commonPrefixWithSimilar = 0;
+		String str1 = allWords[firstWord.wordIndex];
+		String str2 = allWords[secondWord.wordIndex];
+		int minLength = Math.min(str1.length(), str2.length());
+		
+		for (int i = 0; i < minLength; i++) {
+			
+			if (str1.charAt(0) != str2.charAt(0)) {
+				return -1;
+			}
+			
+			if (str1.charAt(i) == str2.charAt(i)) {
+				commonPrefixWithSimilar++;
+			}
+		}
+		return commonPrefixWithSimilar;
+	}

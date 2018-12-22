@@ -1,0 +1,87 @@
+
+<!-- saved from url=(0093)https://www.cs.rutgers.edu/courses/112/classes/fall_2018_venugopal/progs/prog2/testcases.html -->
+<html class="gr__cs_rutgers_edu"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>CS112 Fall 2018: Expression Evaluation Test Cases</title>
+<style>
+body { font: 14px Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;}
+div.code { background: lightgrey; }
+table { border-collapse: collapse; cellspacing: 0px; margin-left: 10%;}
+th { font: bold 14px Trebuchet MS; border-bottom: 1px solid black;
+padding-left: 30px; }
+td { padding: 2px; font: 13px Courier; text-align:center;}
+td.expr {font: bold 14px monospace; color: blue; padding-right: 30px; text-align:left;} 
+tt { color: red; font-weight: bold;}
+a, a:visited { color: blue; }
+pre { color: blue; font-weight: bold;}
+td.hdr { font: 16px Trebuchet MS; text-align: left; 
+         padding-top: 40px; padding-bottom: 20px;}
+div.col1 { position: absolute; top: 7em; left: 10%;}
+div.col2 { position: absolute; top: 7em; left: 40%; width: 50%;}
+</style>
+</head><body data-gr-c-s-loaded="true">
+<center>
+<h2>Programming Assignment 2 (Expression Evaluation)</h2>
+<h2>Test Cases</h2>
+</center>
+<hr>
+
+<table>
+<tbody>
+
+<tr><td colspan="3" class="hdr">
+<tt>makeVariableLists</tt> (20 pts)</td></tr>
+<tr><th>&nbsp;</th><th>Input Expression</th><th class="pts">Points</th></tr>
+<tr><td>1</td><td class="expr">25</td><td class="pts">1</td></tr>
+<tr><td>2</td><td class="expr">abc</td><td class="pts">1</td></tr>
+<tr><td>3</td><td class="expr">xy[15]</td><td class="pts">1</td></tr>
+<tr><td>4</td><td class="expr">P[q[10]]</td><td class="pts">2</td></tr>
+<tr><td>5</td><td class="expr">m[n[X[5]]]</td><td class="pts">2</td></tr>
+<tr><td>6</td><td class="expr">B+B</td><td class="pts">2</td></tr>
+<tr><td>7</td><td class="expr">y+Y-z+R</td><td class="pts">2</td></tr>
+<tr><td>8</td><td class="expr">(a-(b+c)*d)/2</td><td class="pts">3</td></tr>
+<tr><td>9</td><td class="expr">b*(c/a)+z*a</td><td class="pts">3</td></tr>
+<tr><td>10</td><td class="expr">(ab*3/defg)</td><td class="pts">3</td></tr>
+</tbody></table>
+
+<table>
+<tbody><tr><td colspan="3" class="hdr">
+<tt>evaluate</tt> (60 pts)</td></tr>
+<tr><td colspan="3" style="text-align:left">
+<pre>p 2
+x 3
+y 4
+z 8
+C 5 (1,1) (2,2) (3,3) (4,4)
+D 6 (1,1) (3,3) (4,4) (5,5)
+ARRY 3 (1,1) (2,2)
+
+
+</pre>
+</td></tr>
+<tr><th>&nbsp;</th><th>Input Expression</th><th>Value</th><th class="pts">Points</th></tr>
+<tr><td>1</td><td class="expr">255</td><td>255</td><td class="pts">2</td></tr>
+<tr><td>2</td><td class="expr">3+47</td><td>50</td><td class="pts">2</td></tr>
+<tr><td>3</td><td class="expr">13-4-12</td><td>-3</td><td class="pts">2</td></tr>
+<tr><td>4</td><td class="expr">150+14*15</td><td>360</td><td class="pts">2</td></tr>
+<tr><td>5</td><td class="expr">x</td><td>3</td><td class="pts">2</td></tr>
+<tr><td>6</td><td class="expr">p/y</td><td>0.5</td><td class="pts">2</td></tr>
+<tr><td>7</td><td class="expr">p-x+y</td><td>3</td><td class="pts">2</td></tr>
+<tr><td>8</td><td class="expr">p-x*z/p+y-4</td><td>-10</td><td class="pts">4</td></tr>
+<tr><td>9</td><td class="expr">(p)</td><td>2</td><td class="pts">2</td></tr>
+<tr><td>10</td><td class="expr">p-(x-y)</td><td>3</td><td class="pts">4</td></tr>  
+<tr><td>11</td><td class="expr">p-((x-y))</td><td>3</td><td class="pts">4</td></tr>
+<tr><td>12</td><td class="expr">p-(x-y)*(2-z)+y</td><td>0</td><td class="pts">4</td></tr>
+<tr><td>13</td><td class="expr">C[1]</td><td>1</td><td class="pts">2</td></tr>
+<tr><td>14</td><td class="expr">C[x-2]</td><td>1</td><td class="pts">3</td></tr>
+<tr><td>15</td><td class="expr">C[(z-y)]</td><td>4</td><td class="pts">4</td></tr>
+<tr><td>16</td><td class="expr">C[3]+D[4]</td><td>7</td><td class="pts">4</td></tr>
+<tr><td>17</td><td class="expr">C[D[0]]</td><td>0</td><td class="pts">4</td></tr>
+<tr><td>18</td><td class="expr">z*(y-D[p+ARRY[1]-C[1]+x])</td><td>-8</td><td class="pts">6</td></tr>
+<tr><td>19</td><td class="expr">C[D[ARRY[2]*2]]/2</td><td>2</td><td class="pts">5</td></tr>
+</tbody></table>
+
+
+
+</body></html>
